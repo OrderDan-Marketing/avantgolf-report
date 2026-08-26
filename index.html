@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>AVANT × Rose 廣告月報</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap">
+<style>
+  :root{
+    --bg:#F6F8F5;
+    --surface:#FFFFFF;
+    --ink:#1B2B22;
+    --ink-2:#4F6156;
+    --ink-3:#84958A;
+    --line:#DFE7E0;
+    --green:#1E6B45;
+    --green-deep:#124A2F;
+    --green-soft:#E4F0E8;
+    --green-bar:#3E8C64;
+    --rose:#B54A6F;
+    --rose-soft:#F7E7ED;
+    --rose-bar:#C4708D;
+    --sans:"Noto Sans TC",'Microsoft JhengHei',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:920px;margin:0 auto;padding:56px 24px 72px}
+  @media (max-width:720px){.page{padding:36px 16px 56px}}
+
+  /* ---------- header ---------- */
+  .rept-head{
+    background:linear-gradient(140deg,var(--green-deep) 0%,var(--green) 72%,#2C7E53 100%);
+    color:#F2F8F4;border-radius:14px;padding:44px 48px 40px;position:relative;overflow:hidden;
+  }
+  @media (max-width:720px){.rept-head{padding:32px 24px 30px}}
+  .rept-head::after{
+    content:"";position:absolute;right:-70px;top:-90px;width:320px;height:320px;
+    border-radius:50%;background:rgba(255,255,255,.06);
+  }
+  .rept-head::before{
+    content:"";position:absolute;right:60px;bottom:-130px;width:230px;height:230px;
+    border-radius:50%;background:rgba(255,255,255,.05);
+  }
+  .eyebrow{font-size:13px;letter-spacing:.24em;font-weight:500;color:#B9D6C4;margin-bottom:14px}
+  h1{font-weight:900;font-size:33px;line-height:1.35;text-wrap:balance;letter-spacing:.02em}
+  @media (max-width:720px){h1{font-size:25px}}
+  .head-sub{margin-top:10px;font-size:15px;color:#CFE4D6}
+  .head-meta{
+    display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:26px;padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.25);font-size:13.5px;color:#C2DCCC;
+  }
+  .head-meta b{color:#fff;font-weight:500;margin-left:6px}
+
+  /* ---------- sections ---------- */
+  section{margin-top:44px}
+  .sec-tag{font-size:13px;letter-spacing:.2em;color:var(--green);font-weight:700;margin-bottom:6px}
+  h2{font-weight:900;font-size:23px;line-height:1.4;margin-bottom:18px;text-wrap:balance}
+  .note{font-size:13.5px;color:var(--ink-3);margin-top:10px}
+
+  /* ---------- KPI ---------- */
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media (max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}}
+  .kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px 18px}
+  .kpi.lead{background:var(--green-soft);border-color:#C3DCCB}
+  .kpi .k-label{font-size:13px;color:var(--ink-2);font-weight:500}
+  .kpi .k-num{
+    font-weight:900;font-size:32px;line-height:1.15;margin-top:6px;
+    font-variant-numeric:tabular-nums;color:var(--ink);
+  }
+  .kpi.lead .k-num{color:var(--green-deep)}
+  .kpi .k-unit{font-size:15px;font-weight:500;color:var(--ink-2);margin-left:2px}
+  .kpi .k-sub{font-size:12.5px;color:var(--ink-3);margin-top:8px}
+
+  /* ---------- page-compare cards ---------- */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:720px){.duo{grid-template-columns:1fr}}
+  .pagecard{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .pagecard .pc-head{display:flex;align-items:center;gap:12px;padding:18px 22px;border-bottom:1px solid var(--line)}
+  .pc-avatar{
+    width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:18px;color:#fff;flex-shrink:0;
+  }
+  .pagecard.rose .pc-avatar{background:var(--rose)}
+  .pagecard.avant .pc-avatar{background:var(--green)}
+  .pc-head .pc-name{font-size:16px;font-weight:700;line-height:1.35}
+  .pc-head .pc-name span{display:block;font-size:12.5px;color:var(--ink-3);font-weight:400}
+  .pc-body{padding:16px 22px 20px;display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
+  .pc-body .m .m-label{font-size:12.5px;color:var(--ink-3)}
+  .pc-body .m .m-val{font-size:21px;font-weight:900;font-variant-numeric:tabular-nums}
+  .pagecard.rose .m .m-val.hl{color:var(--rose)}
+  .pagecard.avant .m .m-val.hl{color:var(--green)}
+  .pc-foot{padding:0 22px 18px;font-size:13px;color:var(--ink-2)}
+
+  /* ---------- chart ---------- */
+  .chart-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px 24px 16px}
+  .chart-card h3{font-size:15.5px;font-weight:700;margin-bottom:2px}
+  .chart-card .c-sub{font-size:12.5px;color:var(--ink-3);margin-bottom:14px}
+  .legend{display:flex;gap:18px;font-size:12.5px;color:var(--ink-2);margin-bottom:12px}
+  .legend .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+  .hbars{display:flex;flex-direction:column;gap:10px}
+  .hrow{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center}
+  @media (max-width:720px){.hrow{grid-template-columns:110px 1fr}}
+  .hrow .h-label{font-size:13px;color:var(--ink-2);text-align:right;line-height:1.4}
+  .h-track{position:relative;height:26px}
+  .h-bar{
+    height:26px;border-radius:4px;min-width:2px;position:relative;
+    transition:opacity .12s;
+  }
+  .h-bar.rose{background:var(--rose-bar)}
+  .h-bar.avant{background:var(--green-bar)}
+  .h-bar:hover{opacity:.82}
+  .h-val{
+    position:absolute;left:calc(100% + 8px);top:50%;transform:translateY(-50%);
+    font-size:12.5px;font-weight:700;color:var(--ink-2);white-space:nowrap;font-variant-numeric:tabular-nums;
+  }
+  .chart-wrap{position:relative}
+  .tip{
+    position:absolute;pointer-events:none;background:var(--ink);color:#fff;font-size:12.5px;
+    line-height:1.5;padding:7px 11px;border-radius:8px;transform:translate(-50%,-115%);
+    opacity:0;transition:opacity .12s;white-space:nowrap;z-index:5;
+  }
+
+  /* ---------- platform split ---------- */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:720px){.split{grid-template-columns:1fr}}
+  .split .sp{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+  .sp .sp-title{font-size:14px;font-weight:700}
+  .sp .sp-num{font-size:28px;font-weight:900;font-variant-numeric:tabular-nums;margin-top:4px}
+  .sp .sp-sub{font-size:12.5px;color:var(--ink-3);margin-top:6px}
+  .sp .sp-cost{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:700;
+    color:var(--green-deep);background:var(--green-soft);border-radius:99px;padding:2px 10px}
+
+  /* ---------- tables ---------- */
+  .tbl-wrap{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow-x:auto}
+  .tbl-wrap+.tbl-wrap{margin-top:14px}
+  table{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
+  th,td{padding:12px 16px;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  th:first-child,td:first-child{text-align:left}
+  thead th{
+    font-size:12.5px;letter-spacing:.06em;color:var(--ink-2);font-weight:700;
+    border-bottom:2px solid var(--line);background:#FAFCFA;
+  }
+  thead th.pg-rose{color:var(--rose)}
+  thead th.pg-avant{color:var(--green)}
+  tbody tr+tr td{border-top:1px solid var(--line)}
+  tbody tr.sum td{font-weight:900;background:#FAFCFA}
+  td .sub{display:block;font-size:11.5px;color:var(--ink-3);font-weight:400;line-height:1.4}
+
+  /* ---------- insights ---------- */
+  .ins-list{display:flex;flex-direction:column;gap:12px}
+  .ins{background:var(--surface);border:1px solid var(--line);border-radius:12px;
+    padding:20px 24px;display:flex;gap:16px;align-items:flex-start}
+  .ins-mark{flex-shrink:0;width:34px;height:34px;border-radius:9px;background:var(--green-soft);
+    color:var(--green-deep);display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:15px;margin-top:2px}
+  .ins h4{font-size:15.5px;font-weight:700;margin-bottom:2px}
+  .ins p{font-size:14.5px;color:var(--ink-2);max-width:62ch}
+  .ins p b{color:var(--ink);font-weight:700}
+
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+    font-size:12.5px;color:var(--ink-3)}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="rept-head">
+    <div class="eyebrow">META 廣告成效報告</div>
+    <h1>AVANT GOLF × Rose<br>八月廣告投放成果</h1>
+    <div class="head-sub">品牌粉專+Rose 個人帳號 雙軌導流</div>
+    <div class="head-meta">
+      <div>統計期間<b>2026/08/01 – 08/25</b></div>
+      <div>投放平台<b>Facebook・Instagram</b></div>
+      <div>行銷目標<b>檔案/粉專瀏覽・貼文導流</b></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-tag">01</div>
+    <h2>本月成果總覽</h2>
+    <div class="kpis">
+      <div class="kpi lead">
+        <div class="k-label">檔案/粉專瀏覽</div>
+        <div class="k-num">15,370<span class="k-unit">次</span></div>
+        <div class="k-sub">另有落地頁瀏覽 2,288 次(心野)</div>
+      </div>
+      <div class="kpi">
+        <div class="k-label">平均單次瀏覽成本</div>
+        <div class="k-num">$0.60</div>
+        <div class="k-sub">導流型成本,愈低愈好</div>
+      </div>
+      <div class="kpi">
+        <div class="k-label">廣告曝光</div>
+        <div class="k-num">167,751</div>
+        <div class="k-sub">整體 CTR 約 9.8%</div>
+      </div>
+      <div class="kpi">
+        <div class="k-label">總花費</div>
+        <div class="k-num">$10,722</div>
+        <div class="k-sub">12 檔素材輪播中</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-tag">02</div>
+    <h2>兩個粉專的表現</h2>
+    <div class="duo">
+      <div class="pagecard rose">
+        <div class="pc-head">
+          <div class="pc-avatar">R</div>
+          <div class="pc-name">曾琪鈞 - Rose Tseng<span>個人視角・球場開箱/教學系,9 檔</span></div>
+        </div>
+        <div class="pc-body">
+          <div class="m"><div class="m-label">花費</div><div class="m-val">$7,076</div></div>
+          <div class="m"><div class="m-label">曝光</div><div class="m-val">127,362</div></div>
+          <div class="m"><div class="m-label">檔案/粉專瀏覽</div><div class="m-val hl">11,824</div></div>
+          <div class="m"><div class="m-label">單次瀏覽成本</div><div class="m-val hl">$0.47</div></div>
+        </div>
+        <div class="pc-foot">另有心野一檔導外部連結:落地頁瀏覽 2,288 次</div>
+      </div>
+      <div class="pagecard avant">
+        <div class="pc-head">
+          <div class="pc-avatar">A</div>
+          <div class="pc-name">AVANT GOLF<span>品牌帳號・商品/店內方案系,3 檔</span></div>
+        </div>
+        <div class="pc-body">
+          <div class="m"><div class="m-label">花費</div><div class="m-val">$3,646</div></div>
+          <div class="m"><div class="m-label">曝光</div><div class="m-val">40,389</div></div>
+          <div class="m"><div class="m-label">檔案/粉專瀏覽</div><div class="m-val hl">3,546</div></div>
+          <div class="m"><div class="m-label">單次瀏覽成本</div><div class="m-val hl">$1.03</div></div>
+        </div>
+        <div class="pc-foot">SUN DAY RED 撐住基本盤;夏日 Ladies 專案偏弱</div>
+      </div>
+    </div>
+    <div class="note">預算比約 66:34,成果比約 77:23 —— Rose 個人視角內容的導流效率約為品牌帳號的 2 倍。</div>
+  </section>
+
+  <section>
+    <div class="sec-tag">03</div>
+    <h2>各素材檔案瀏覽次數</h2>
+    <div class="chart-card">
+      <h3>本月有花費素材・檔案/粉專瀏覽</h3>
+      <div class="c-sub">單位:次;右側標註單次瀏覽成本(心野目標不同未列入本圖)</div>
+      <div class="legend">
+        <span><span class="sw" style="background:var(--rose-bar)"></span>Rose 粉專</span>
+        <span><span class="sw" style="background:var(--green-bar)"></span>亞凡粉專</span>
+      </div>
+      <div class="chart-wrap" id="hb-wrap">
+        <div class="hbars" id="hbars"></div>
+        <div class="tip" id="hb-tip"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-tag">04</div>
+    <h2>FB 粉專 vs IG 的量從哪來</h2>
+    <div class="split">
+      <div class="sp">
+        <div class="sp-title">Facebook 粉絲專頁瀏覽</div>
+        <div class="sp-num">8,453 次</div>
+        <div class="sp-sub">花費 $4,752・曝光 93,019</div>
+        <div class="sp-cost">單次 $0.56</div>
+      </div>
+      <div class="sp">
+        <div class="sp-title">Instagram 檔案瀏覽</div>
+        <div class="sp-num">6,917 次</div>
+        <div class="sp-sub">花費 $4,429・曝光 74,733</div>
+        <div class="sp-cost">單次 $0.64</div>
+      </div>
+    </div>
+    <div class="note">FB 端佔成果 55%:商品與在地美食題材幾乎都是 FB 在吃量;IG 端主力是 8/7 左營海軍球場(IG 瀏覽 4,207 次,佔該檔 92%)。心野落地頁瀏覽另計:FB 1,904/IG 384。</div>
+  </section>
+
+  <section>
+    <div class="sec-tag">05</div>
+    <h2>心野・獨立分析</h2>
+    <div class="chart-card">
+      <h3>心野-每日(建案品牌影片・導外部連結)</h3>
+      <div class="c-sub">中都濕地公園生活圈;掛 Rose 粉專投放,CTA「查看詳情」;目標=連結頁面瀏覽,故與檔案瀏覽類素材分開計</div>
+      <div class="kpis" style="margin-top:6px">
+        <div class="kpi">
+          <div class="k-label">花費(8/8 起投)</div>
+          <div class="k-num">$1,541</div>
+          <div class="k-sub">曝光 25,640</div>
+        </div>
+        <div class="kpi lead">
+          <div class="k-label">落地頁瀏覽</div>
+          <div class="k-num">2,288<span class="k-unit">次</span></div>
+          <div class="k-sub">單次 $0.67</div>
+        </div>
+        <div class="kpi">
+          <div class="k-label">點閱率 CTR</div>
+          <div class="k-num">11.60<span class="k-unit">%</span></div>
+          <div class="k-sub">週週走升,無疲乏</div>
+        </div>
+        <div class="kpi">
+          <div class="k-label">點擊→到達率</div>
+          <div class="k-num">77<span class="k-unit">%</span></div>
+          <div class="k-sub">2,288 / 2,974 次點擊</div>
+        </div>
+      </div>
+      <div class="tbl-wrap" style="margin-top:14px">
+        <table style="min-width:520px">
+          <thead>
+            <tr><th>週期</th><th>花費</th><th>曝光</th><th>CTR</th><th>落地頁瀏覽</th><th>單次成本</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>8/8 – 8/14(起跑週)</td><td>$303</td><td>4,894</td><td>10.97%</td><td>414</td><td>$0.73</td></tr>
+            <tr><td>8/15 – 8/21</td><td>$809</td><td>14,174</td><td>11.70%</td><td>1,293</td><td>$0.63</td></tr>
+            <tr><td>8/22 – 8/25(4 天)</td><td>$431</td><td>6,595</td><td>11.84%</td><td>583</td><td>$0.74</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">預算放大 2.7 倍的那一週,單次成本反而降到 $0.63、CTR 續升——素材仍在健康放量期,可繼續加碼;FB 端 $0.65/次(1,904 次)略優於 IG $0.77/次(384 次)。</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-tag">06</div>
+    <h2>夏日 Ladies 專案・週區間分析</h2>
+    <div class="chart-card">
+      <h3>夏日 Ladies 專案(亞凡粉專・店內方案)</h3>
+      <div class="c-sub">7/24 起投;女生同行 3 小時 1299 室內模擬器方案</div>
+      <div class="tbl-wrap" style="margin-top:6px">
+        <table style="min-width:560px">
+          <thead>
+            <tr><th>週期</th><th>花費</th><th>曝光</th><th>CTR</th><th>頻率</th><th>檔案/粉專瀏覽</th><th>單次成本</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>7/24 – 7/30(起跑週)</td><td>$1,091</td><td>11,811</td><td>6.33%</td><td>1.48</td><td>767</td><td>$1.42</td></tr>
+            <tr><td>7/31 – 8/6</td><td>$577</td><td>6,829</td><td>5.32%</td><td>1.16</td><td>379</td><td>$1.52</td></tr>
+            <tr><td>8/7 – 8/13</td><td>$74</td><td>957</td><td>5.54%</td><td>1.14</td><td>53</td><td>$1.40</td></tr>
+            <tr><td>8/14 – 8/20</td><td>$50</td><td>717</td><td>5.02%</td><td>1.05</td><td>41</td><td>$1.22</td></tr>
+            <tr><td>8/21 – 8/25(5 天)</td><td>$248</td><td>3,259</td><td>5.95%</td><td>1.23</td><td>183</td><td>$1.36</td></tr>
+            <tr class="sum"><td>累計</td><td>$2,040</td><td>23,573</td><td>~5.8%</td><td>—</td><td>1,423</td><td>$1.43</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">判讀:不是跑久疲乏,而是<b>第一週就弱</b>——起跑週 CTR 6.33% 已是全帳號墊底(其他素材 9–12%),頻率僅 1.0–1.5 可排除重複曝光因素;系統第二週起持續抽走預算,8/21 回灌測試 CTR 仍未突破 6%。方案本身有吸引力,問題在素材切角——建議改以 Rose 帶朋友實際體驗的第一人稱視角重拍。</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-tag">07</div>
+    <h2>素材明細</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th class="pg-rose">Rose 粉專素材</th><th>花費</th><th>曝光</th><th>CTR</th><th>檔案/粉專瀏覽</th><th>單次成本</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>8/7 左營海軍高爾夫球場</td><td>$2,029</td><td>37,197</td><td>11.61%</td><td>4,573</td><td>$0.44</td></tr>
+          <tr><td>心野-每日<span class="sub">目標=連結頁面瀏覽</span></td><td>$1,541</td><td>25,640</td><td>11.60%</td><td>落地頁 2,288</td><td>$0.67</td></tr>
+          <tr><td>大岡山</td><td>$1,188</td><td>21,151</td><td>9.38%</td><td>2,214</td><td>$0.54</td></tr>
+          <tr><td>大岡山美食</td><td>$1,179</td><td>20,749</td><td>9.10%</td><td>2,200</td><td>$0.54</td></tr>
+          <tr><td>7/10 高爾夫新手入門</td><td>$981</td><td>18,987</td><td>11.20%</td><td>2,335</td><td>$0.42</td></tr>
+          <tr><td>信誼球場・總經理帶路<span class="sub">8/17 起投;廣告名稱沿用舊檔「7/22女生包包裡」</span></td><td>$96</td><td>2,145</td><td>10.68%</td><td>312</td><td>$0.31</td></tr>
+          <tr><td>8/19 專注、揮桿</td><td>$59</td><td>1,301</td><td>12.61%</td><td>170</td><td>$0.35</td></tr>
+          <tr><td>8/14 信誼球場(另一剪版)・8/12 補貨<span class="sub">剛起量</span></td><td>$3</td><td>192</td><td>—</td><td>20</td><td>—</td></tr>
+          <tr class="sum"><td>小計</td><td>$7,076</td><td>127,362</td><td>~10.6%</td><td>11,824</td><td>$0.47</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th class="pg-avant">亞凡粉專素材</th><th>花費</th><th>曝光</th><th>CTR</th><th>檔案/粉專瀏覽</th><th>單次成本</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>SUN DAY RED</td><td>$2,769</td><td>28,947</td><td>8.04%</td><td>2,921</td><td>$0.95</td></tr>
+          <tr><td>夏日 Ladies 專案</td><td>$793</td><td>10,054</td><td>5.41%</td><td>549</td><td>$1.44</td></tr>
+          <tr><td>LINE禮物開張<span class="sub">已暫停</span></td><td>$84</td><td>1,388</td><td>7.85%</td><td>76</td><td>$1.11</td></tr>
+          <tr class="sum"><td>小計</td><td>$3,646</td><td>40,389</td><td>~7.3%</td><td>3,546</td><td>$1.03</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">Rose 粉專小計的單次成本以檔案瀏覽計(心野花費與落地頁成果另計)。金額幣別均為新台幣。</div>
+  </section>
+
+  <section>
+    <div class="sec-tag">08</div>
+    <h2>數據解析與下一步</h2>
+    <div class="ins-list">
+      <div class="ins">
+        <div class="ins-mark">一</div>
+        <div>
+          <h4>球場開箱系是全帳號效率王</h4>
+          <p>左營海軍(11.61%)、新手入門(11.20%)、8/19 專注揮桿(12.61%)CTR 全數破 11%,單次瀏覽 <b>$0.35–0.44</b>;「跟著 Rose 逛球場」的題材持續有效,建議維持每月固定產出。</p>
+        </div>
+      </div>
+      <div class="ins">
+        <div class="ins-mark">二</div>
+        <div>
+          <h4>Rose 個人視角效率是品牌帳號的 2 倍</h4>
+          <p>單次瀏覽 Rose <b>$0.47</b> vs 亞凡 <b>$1.03</b>。商品訊息若能包進 Rose 的第一人稱敘事(如球場實穿、實用開箱),比品牌帳號直發更省成本。</p>
+        </div>
+      </div>
+      <div class="ins">
+        <div class="ins-mark">三</div>
+        <div>
+          <h4>SUN DAY RED 開始出現疲乏訊號</h4>
+          <p>吃了第二多預算($2,769),但頻率 <b>1.87</b> 偏高、CTR 8.04%——同一批受眾重複觀看中;建議補新剪版或換受眾,避免成本繼續墊高。</p>
+        </div>
+      </div>
+      <div class="ins">
+        <div class="ins-mark">四</div>
+        <div>
+          <h4>信誼球場新片效率最佳,但還沒分到預算</h4>
+          <p>8/17 上線的信誼球場(總經理帶路)單次瀏覽僅 <b>$0.31,全帳號最低</b>,CTR 10.7%;目前預算優化仍集中在既有勝出檔,兩檔信誼合計只花 $99。建議拉高權重讓它放量,有機會複製左營海軍的成績。</p>
+        </div>
+      </div>
+      <div class="ins">
+        <div class="ins-mark">五</div>
+        <div>
+          <h4>夏日 Ladies 專案需要換血</h4>
+          <p>FB 6.35%/IG 4.78% 兩端 CTR 都是全帳號最低,單次瀏覽 <b>$1.44</b> 最貴;方案本身有吸引力,問題在素材切角,建議改以 Rose 帶朋友實際體驗的視角重拍。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>Orderdan 簡單營銷 × AVANT GOLF</div>
+    <div>資料來源:Meta 廣告管理員・統計至 2026/08/25</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var data=[
+    {label:"8/7 左營海軍球場",page:"rose",visits:4573,cost:"$0.44",spend:"$2,029"},
+    {label:"SUN DAY RED",page:"avant",visits:2921,cost:"$0.95",spend:"$2,769"},
+    {label:"7/10 新手入門",page:"rose",visits:2335,cost:"$0.42",spend:"$981"},
+    {label:"大岡山",page:"rose",visits:2214,cost:"$0.54",spend:"$1,188"},
+    {label:"大岡山美食",page:"rose",visits:2200,cost:"$0.54",spend:"$1,179"},
+    {label:"夏日 Ladies 專案",page:"avant",visits:549,cost:"$1.44",spend:"$793"},
+    {label:"信誼球場・帶路版",page:"rose",visits:312,cost:"$0.31",spend:"$96"},
+    {label:"8/19 專注、揮桿",page:"rose",visits:170,cost:"$0.35",spend:"$59"},
+    {label:"LINE禮物開張",page:"avant",visits:76,cost:"$1.11",spend:"$84"}
+  ];
+  var max=data[0].visits;
+  var wrap=document.getElementById("hbars");
+  data.forEach(function(d,i){
+    var row=document.createElement("div");row.className="hrow";
+    var lb=document.createElement("div");lb.className="h-label";lb.textContent=d.label;
+    var track=document.createElement("div");track.className="h-track";
+    var bar=document.createElement("div");
+    bar.className="h-bar "+d.page;
+    bar.style.width=Math.max(1.2,(d.visits/max)*72)+"%";
+    bar.setAttribute("data-i",i);
+    var val=document.createElement("span");val.className="h-val";
+    val.textContent=d.visits.toLocaleString()+"・"+d.cost+"/次";
+    bar.appendChild(val);
+    track.appendChild(bar);
+    row.appendChild(lb);row.appendChild(track);
+    wrap.appendChild(row);
+  });
+  var box=document.getElementById("hb-wrap"),tip=document.getElementById("hb-tip");
+  box.addEventListener("mousemove",function(ev){
+    var t=ev.target.closest?ev.target.closest(".h-bar"):null;
+    if(!t){tip.style.opacity=0;return;}
+    var d=data[+t.getAttribute("data-i")],r=box.getBoundingClientRect();
+    tip.innerHTML="<b>"+d.label+"</b><br>花費 "+d.spend+"・瀏覽 "+d.visits.toLocaleString()+" 次<br>單次 "+d.cost;
+    tip.style.left=(ev.clientX-r.left)+"px";
+    tip.style.top=(ev.clientY-r.top-6)+"px";
+    tip.style.opacity=1;
+  });
+  box.addEventListener("mouseleave",function(){tip.style.opacity=0;});
+})();
+</script>
+
+</body></html>
