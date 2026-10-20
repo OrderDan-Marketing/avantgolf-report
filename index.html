@@ -75,6 +75,15 @@
   h2{font-weight:900;font-size:27px;line-height:1.4;margin-bottom:18px;text-wrap:balance}
   .note{font-size:14px;color:var(--ink-3);margin-top:10px}
 
+  /* ---------- 上週判讀(條列版) ---------- */
+  .read{margin-top:14px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 22px 16px}
+  @media (max-width:720px){.read{padding:16px 16px 14px}}
+  .read-title{font-size:14px;letter-spacing:.12em;color:var(--green);font-weight:700;margin-bottom:10px}
+  .read ol{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .read ol>li>b{display:block;font-size:15px;color:var(--ink);font-weight:700;margin-bottom:4px}
+  .read ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-2);line-height:1.7;max-width:70ch}
+  .read ul li+li{margin-top:2px}
+
   /* ---------- KPI ---------- */
   .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
   @media (max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}}
@@ -273,7 +282,43 @@
         </tbody>
       </table>
     </div>
-    <div class="note">上週判讀:①<b>花費與前兩週平均持平(+1%)、瀏覽多 7%,單次 $1.22 → $1.15</b>——曝光少 9%、CPM 貴 12%($73 → $82),但 CTR 從 8.58% 升到 9.02%、每次點擊帶來的檔案瀏覽從 0.70 次升到 0.79 次,把曝光下滑補了回來;單次成本三週走勢 $1.26 → $1.19 → $1.15。②<b>Rose 個人專用組合的預算集中到 9/23 出差日記</b>:$413 → $582(佔該組合 94%),599 次、單次 $1.05 → $0.97、CTR 10.56%,與店長介紹並列上週花費最高;1002 球場禮儀 2 $103 → $7、1007 大衛營 $23 → $8,系統把這兩檔的量收走了;1009 新片起跑只分到 $2,1015 新片還在審核。③<b>亞凡組合單次 $2.32 → $2.09</b>:店長介紹 $606 → $582、單次 $2.60 → $2.29、CTR 6.18% → 6.85%,仍佔亞凡組合 55%;SUN DAY RED $111 帶來 85 次、單次 $1.81 → $1.31,是亞凡組合上週最便宜的一檔;7 日穿搭 $154 → $225、單次 $1.93 → $2.14;SUN DAY RED 3 $2.31 → $2.51。④<b>球場組合 $0.71 → $0.77</b>:信誼球場 Part 2 $519、633 次,單次三週 $0.81 → $0.74 → $0.82,頻率 1.20 未升;棕梠湖 $83 → $110、180 次、單次 $0.61;左營海軍 $0.75。⑤7/10 新手入門止跌:$338 → $343、318 次,單次 $1.08 持平。</div>
+    <div class="read">
+      <div class="read-title">上週判讀</div>
+      <ol>
+        <li><b>① 整體:花費持平、瀏覽多 7%,單次 $1.22 → $1.15</b>
+          <ul>
+            <li>花費與前兩週平均比 +1%;曝光少 9%、CPM 貴 12%($73 → $82)。</li>
+            <li>CTR 8.58% → 9.02%;每次點擊帶來的檔案瀏覽 0.70 次 → 0.79 次,把曝光下滑補了回來。</li>
+            <li>單次成本三週走勢 $1.26 → $1.19 → $1.15。</li>
+          </ul>
+        </li>
+        <li><b>② Rose 個人專用組合:預算集中到 9/23 出差日記</b>
+          <ul>
+            <li>出差日記 $413 → $582(佔該組合 94%),599 次、單次 $1.05 → $0.97、CTR 10.56%,與店長介紹並列上週花費最高。</li>
+            <li>1002 球場禮儀 2 $103 → $7、1007 大衛營 $23 → $8,系統把這兩檔的量收走了。</li>
+            <li>1009 新片起跑只分到 $2;1015 新片還在審核。</li>
+          </ul>
+        </li>
+        <li><b>③ 亞凡組合:單次 $2.32 → $2.09</b>
+          <ul>
+            <li>店長介紹 $606 → $582、單次 $2.60 → $2.29、CTR 6.18% → 6.85%,仍佔亞凡組合 55%。</li>
+            <li>SUN DAY RED $111 帶來 85 次、單次 $1.81 → $1.31,是亞凡組合上週最便宜的一檔。</li>
+            <li>7 日穿搭 $154 → $225、單次 $1.93 → $2.14;SUN DAY RED 3 $2.31 → $2.51。</li>
+          </ul>
+        </li>
+        <li><b>④ 球場組合:單次 $0.71 → $0.77</b>
+          <ul>
+            <li>信誼球場 Part 2 $519、633 次,單次三週 $0.81 → $0.74 → $0.82,頻率 1.20 未升。</li>
+            <li>棕梠湖 $83 → $110、180 次、單次 $0.61;左營海軍 $0.75。</li>
+          </ul>
+        </li>
+        <li><b>⑤ 7/10 新手入門:止跌</b>
+          <ul>
+            <li>$338 → $343、318 次,單次 $1.08 持平。</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
   </section>
 
   <section id="s3">
